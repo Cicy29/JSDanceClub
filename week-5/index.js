@@ -1,7 +1,10 @@
 const express = require('express')
-const UserService = require('./services/user-service')
+// const UserService = require('./services/user-service')
 const bodyParser = require('body-parser')
 const path = require('path')
+const userRouter = require("./routes/user")
+const clubRouter = require("./routes/club")
+const suggestedEventRouter = require("./routes/suggested-event")
 
 require('./mongo-connection')
 

@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
-const UserService = require('./services/user-service')
-const ClubService = require('./services/club-service')
-const SuggestedEventService = require('./services/suggested-event-service')
+const UserService = require('../services/user-service')
+const ClubService = require('../services/club-service')
+const SuggestedEventService = require('../services/suggested-event-service')
 
 router.get('/all', async (req, res) => {
     const people = await UserService.findAll()
