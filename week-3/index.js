@@ -10,12 +10,15 @@ const ClubService = require('./services/club-service.js')
 async function main() {
     const clark = new User("Clark Kent", 25, "Berlin");
     const bruce = new User("Bruce Wayne", 29, "Berlin");
+    const mel = new User("Mel", 25, "Berlin");
 
     const yaam = new Club("Yaam", "Afrobeats");
     const electro = new SuggestedEvent("Electro Swing", "Friedrichhain");
     clark.buysTicket(electro);
     bruce.buysTicket(electro);
     bruce.wantsToPartyAt(yaam);
+    mel.wantsToPartyAt(yaam);
+
 
     await UserService.add(bruce)
     await UserService.add(clark)

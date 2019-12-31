@@ -1,0 +1,300 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#banner {
+    background-color: rgba(255, 255, 255, 0);
+    background-size: cover;
+    background-position: center;
+    padding: 60px;
+    margin: 20px;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+
+}
+
+#banner p {
+    color: gold;
+    font-size: 80px;
+    font-family: 'Reem Kufi', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Reem Kufi', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    background-color: black;
+}
+
+.logo {
+    color: gold;
+    font-family: 'Reem Kufi', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+
+    list-style: none;
+}
+
+.nav-links a {
+
+    color: gold;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.Burger {
+    display: none;
+    cursor: pointer;
+}
+
+.Burger div {
+    width: 25px;
+    height: 3px;
+    background-color: gold;
+    margin: 5px;
+
+}
+
+.field-name,
+.field-email,
+.field-password,
+.field-finish {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    height: 50px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.field-name i,
+.field-email i,
+.field-password i,
+.field-finish i {
+    color: gold;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.field-name input,
+.field-email input,
+.field-password input {
+    background: none;
+    border: none;
+    flex: 1;
+    height: 100%;
+    outline: none;
+}
+
+div.inactive {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+div.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+footer {
+    background-color: black;
+    height: 8vh;
+}
+
+footer p {
+    text-align: center;
+    color: gold;
+
+}
+
+.header {
+    /* background-image: url("berlinnight.jpg"); */
+    height: 100vh;
+    display: flex;
+    background-image: url("berlinnight.jpg");
+    background-size: cover;
+    padding: 400px;
+    transition: background 0.5s ease;
+    position: relative;
+}
+
+
+/* background-image: url("clubberlin.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 60px;
+    text-align: center;
+    color: black;
+    font-size: 30px; */
+
+
+
+.header h1 {
+    font-weight: bold;
+    font-size: 150%;
+    font: 300;
+
+}
+
+
+
+@media screen and (max-width:1024px) {
+    .nav-links {
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+
+    }
+}
+
+.nav-links li {
+    opacity: 0;
+
+}
+
+.Burger {
+    display: block;
+
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.search-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: center;
+    width: 10%;
+    background: #f1f1f1;
+    max-width: 200px;
+}
+
+/* Style the submit button */
+form.example button {
+    float: center;
+    width: 10%;
+    padding: 10px;
+    background: black;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    /* border-left: none; */
+    /* Prevent double borders */
+    cursor: pointer;
+    max-width: 70px;
+}
+
+form.example button:hover {
+    background: black;
+}
+
+/* Clear floats */
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
